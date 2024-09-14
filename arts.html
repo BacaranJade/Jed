@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Artist Portfolio</title>
+</head>
+<style>
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropbtn {
+  border-radius: 10px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: black;
+}
+
+
+.dropdown {
+  position: sticky;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #c90505;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #121212;
+        color: #f4f4f4;
+    }
+
+    .header {
+        background-color: #1e1e1e;
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header h1 {
+        color: #098a1a;
+    }
+
+    .hero {
+        height: 80vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://th.bing.com/th/id/R.40d93e5d629c34354bd6bbc5c5a61d98?rik=1%2b47yHSi3OQ6Nw&riu=http%3a%2f%2fblended-html.com%2fbackground-images%2fbi-background-black.png&ehk=M3Dysbq4ieBl9B4FNOhQWN5VfFNa3%2b5sd2NIObdKuUY%3d&risl=&pid=ImgRaw&r=0') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: #f4f4f4;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+        margin-bottom: 0px;
+    }
+
+    
+
+    footer {
+        background-color: #1e1e1e;
+        text-align: center;
+        padding: 5px;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        color: #f4f4f4;
+    }
+
+    .artist-section {
+        background-color: #fff5f500;
+        padding: 50px 0;
+        color: #f0eeee;
+        opacity: 100;
+        transform: translateY(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .section-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .artist-info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .text-content1 {
+        flex: 2;
+        font-size: 1.1rem;
+    }
+
+    .text-content2 {
+        flex: 2;
+        
+    }
+
+    .image-content3 {
+        flex: 1;
+    }
+
+    .image-content img {
+        height: 500px;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px rgb(219, 3, 3);
+    }
+
+    h2 {
+        color: #f50661;
+        margin: 0;
+    }
+
+    h3 {
+        color: #7506f5;
+        margin-bottom: 20px;
+    }
+
+
+</style>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Group 6</h1>
+            <div class="dropdown">
+                <button class="dropbtn">Show Members And Thier Contributions</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="scrollToSection('section1')">Ryan Christian Daro - Frontend</a>
+                    <a href="#" onclick="scrollToSection('section2')">Jay Francis Ferrer - Frontend</a>
+                    <a href="#" onclick="scrollToSection('section3')">Jade Bacaran - Frontend</a>
+                    <a href="#" onclick="scrollToSection('section3')">Rubilyn Arañas - Larry Alcala (Researcher)</a>
+                    <a href="#" onclick="scrollToSection('section3')">Christan Carl Macan - Uwang Ahadas(Reseacher)</a>
+                    <a href="#" onclick="scrollToSection('section3')">Kate Byonce Tura - Federico Caballero(Researcher)</a>
+                </div>
+            </div>
+        
+
+
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>National and GAMABA Artists</h2>
+            <h1>Scroll Down To Discover More.</h1>
+
+        </div>
+    </section>
+    <section class="artist-section" id="section1">
+        <h2>Section 1</h2>
+        <div class="container">
+
+            <div class="artist-info">
+                <div class="text-content1">
+                    <h3>Larry Alcala (National Artist for Visual Arts)</h3>
+                    <p>Biography:</p><br>
+                    <p>Full Name: Lauro “Larry” Zarate Alcala</p>
+                    <p>Birthdate: August 18, 1926</p>
+                    <p>Death: June 24, 2002</p><br>
+                    <p>Background:</p>
+                    <p>Born in Daraga, Albay, Larry Alcala studied Fine Arts at the University of the Philippines. He
+                        became one of the most famous Filipino cartoonists, starting his career with Siopawman in 1946.
+                    </p><br>
+                    <p>Influences: His works were influenced by Filipino culture, humor, and social satire.</p><br>
+                    <p>Artistic Contributions:</p><br>
+                    <p>Notable Works:</p><br>
+                    <p>Slice of Life:</p>
+                    <p>A comic strip that humorously depicted everyday Filipino life.</p><br>
+                    <p>Kalabog en Bosyo and Asiong Aksaya:</p>
+                    <p>Comedic comic strips with strong cultural relevance.</p><br>
+                    <p>Artistic Style: Alcala’s style was characterized by clean lines, humor, and relatable everyday
+                        situations. His work, full of cultural references, helped Filipinos see the humor in their
+                        day-to-day lives.</p><br>
+                    <p>Impact: He made Filipino culture accessible to all, blending art with humor. His comic strips are
+                        still considered classics in Philippine cartoon history.
+                        Legacy.</p>
+
+                </div>
+                <div class="image-content">
+                    <img src="https://th.bing.com/th/id/R.a4ea4938ee718260ffcaa1ddf07727f7?rik=v%2fdofjHLLzyrIg&riu=http%3a%2f%2fwww.oocities.org%2fsoho%2fstudios%2f4308%2flarry1.jpg&ehk=isVluCaEEg9hQ7jY3MKUJTT%2fGcOgDI%2f9VfTFbFgSm3M%3d&risl=&pid=ImgRaw&r=0/300"
+                        alt="Larry Alcala">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    </div>
+    </section>
+
+    <section class="artist-section" id="section2">
+        <h2>Section 2</h2>
+        <div class="container">
+
+            <div class="artist-info">
+                <div class="text-content2">
+                    <h3>Uwang Ahadas (GAMABA Artist)</h3>
+                    <p>Biography:</p><br>
+                    <p>Full Name: Haji Uwang Ahadas</p>
+                    <p>Birthdate: February 15, 1945</p>
+                    <p>Background:</p>
+                    <p>Born in Lamitan, Basilan, Haji Uwang Ahadas is a master of Yakan traditional music. He learned to
+                        play various traditional instruments such as the kulingtangan, agung, and gabbang. Despite
+                        developing impaired vision at a young age, Ahadas continued to master these instruments, driven
+                        by his commitment to preserving the rich musical traditions of the Yakan people.</p><br>
+                    <p>Influences: His works were influenced by Filipino culture, humor, and social satire.</p><br>
+                    <p>Artistic Contributions:</p><br>
+                    <p>Notable Works:</p><br>
+                    <p>Ahadas is renowned for his exceptional skill with traditional Yakan instruments. He not only
+                        performed but also shared his knowledge with others, teaching younger generations to ensure
+                        these traditions would not fade.</p><br>
+                    <p>Artistic Style: His mastery of traditional Yakan instruments reflects the deep cultural heritage
+                        of the Yakan community, contributing to the preservation of their musical practices.</p><br>
+                    <p>Cultural Impact & Legacy: Haji Uwang Ahadas was awarded the Gawad sa Manlilikha ng Bayan (GAMABA)
+                        in 2000 for his role in keeping the Yakan musical traditions alive. His dedication to teaching
+                        and performing has ensured the survival of these cultural practices for future generations.</p>
+
+                </div>
+                <div class="image-content">
+                    <img src="https://live.staticflickr.com/7714/29004965523_6d7fb06290_o.png" alt="Uwang Ahadas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="artist-section" id="section3">
+        <h2>Section 3</h2>
+        <div class="container">
+
+            <div class="artist-info">
+                <div class="text-content3">
+                    <h3>Federico Caballero (GAMABA Artist)</h3>
+                    <p>Biography:</p><br>
+                    <p>Birthdate: December 23, 1938.</p><br>
+                    <p>Background:</p><br>
+                    <p>Federico Caballero hails from the Sulod-Bukidnon people of Panay. Growing up, he learned the
+                        Sugidanon epics from his mother and elders in his community. Despite the modern era, he
+                        continued to
+                        practice and document these oral traditions</p><br>
+                    <p>Influences: His commitment to preserving ancient epics was rooted in his deep respect for his
+                        ancestors and cultural heritage.</p><br>
+                    <p>Artistic Contributions:</p><br>
+                    <p>Notable Works:</p><br>
+                    <p>Caballero is known for his mastery of chanting the Sugidanon epics, which narrate the lives of
+                        heroes
+                        from Panay.</p><br>
+                    <p>Artistic Style: His chanting style reflects an ancient oral tradition, preserving a vital link to
+                        the
+                        cultural heritage of the Visayas.</p><br>
+                    <p>Cultural Impact & Legacy:He was awarded the GAMABA in 2000 for his efforts to preserve the
+                        Sugidanon
+                        and for keeping the oral tradition alive.</p><br>
+                    <p>Why Recognized: His dedication to cultural preservation has allowed the epics to continue being a
+                        part of the Sulod-Bukidnon identity.</p><br>
+                </div>
+                <div class="image-content">
+                    <img src="https://live.staticflickr.com/8515/29338492300_25c9045d69_o.png/300"
+                        alt="Federico Caballero">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Group 6 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        const animate2 = () => {
+            var tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#section1",
+                    scroller: "body",
+                    start: "top 50%",
+                    end: "top -5%",
+                    scrub: 1
+                }
+            })
+
+            tl.from(".text-content1 p", {
+                opacity: 0,
+                x: -50,
+                stagger: .15
+            })
+        }
+        const animate3 = () => {
+            var tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#section2",
+                    scroller: "body",
+                    start: "top 50%",
+                    end: "top -5%",
+                    scrub: 1
+                }
+            })
+
+            tl.from(".text-content2 p", {
+                opacity: 0,
+                x: 50,
+                stagger: .15
+            })
+        }
+        const animate4 = () => {
+            var tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#section3",
+                    scroller: "body",
+                    start: "top 50%",
+                    end: "top -5%",
+                    scrub: 1,
+                    
+                }
+            })
+
+            tl.from(".text-content3 p", {
+                opacity: 0,
+                x: -50,
+                stagger: .15
+            })
+        }
+        animate2()
+        animate3()
+        animate4()
+    </script>
+
+
+</div>
+</div>
+</body>
+
+</html>
